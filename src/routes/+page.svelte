@@ -58,6 +58,12 @@
 		<iframe class="iframe" title="Output" srcdoc={input} sandbox></iframe>
 	</div>
 </div>
+<footer class="footer">
+	<span class="footer_text"
+		>Created by <a target="_blank" href="https://github.com/NMilutin">NMilutin</a> with
+		<a target="_blank" href="https://svelte.dev">Svelte</a></span
+	>
+</footer>
 
 <!-- TODO Vezbe (Box Model, Flexbox * n, Tranzicije) -->
 <style>
@@ -145,11 +151,36 @@
 		border-left: none;
 		max-height: 100%;
 	}
-
 	:global(.container_codemirror > :only-child) {
 		height: 100%;
 		max-height: 100%;
 	}
+
+	.footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		width: 100%;
+		height: 4vh;
+		border-top: 1px solid #3e3e3e;
+		justify-content: center;
+		align-items: center;
+		font-size: small;
+	}
+	.footer_text a:link {
+		color: #4d4d4d;
+	}
+	.footer_text a:visited {
+		color: #2a2a2a;
+	}
+	.footer_text a:hover {
+		color: #8e8e8e;
+	}
+	.footer_text a:active {
+		color: #5e5e5e;
+	}
+
 	:global(body) {
 		margin: 0;
 	}
